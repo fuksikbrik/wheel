@@ -11,8 +11,8 @@ function promiseAfterTimeout(seconds) {
   }
   
   function randomDegrees() {
-    let randomFloat = Math.random()*360;
-    let descreetDegrees = Math.round(randomFloat / 36) * 36;
+    let randomFloat = Math.random()*720;
+    let descreetDegrees = Math.round(randomFloat / 72) * 72;
     return descreetDegrees;
   }
   
@@ -31,7 +31,12 @@ function promiseAfterTimeout(seconds) {
       .then(() => {
         let winColor = getCurrentColor(currentRotation);
         let result = document.querySelector('.result');
-        result.innerHTML = `${winColor}`;
+        let modal = document.querySelector('.modal')
+        modal.classList.add('active')
+        remove.addEventListener('click', function () {
+            modal.classList.remove('active')
+          })
+        result.innerHTML = `+${winColor}`;
       });
   }
   
@@ -41,7 +46,8 @@ function promiseAfterTimeout(seconds) {
 
 
 
-
+  let remove = document.querySelector('.remove')
+  
 
 
 
