@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:black;
+    background-repeat: no-repeat no-repeat;
+    background-size: 100% auto;
+}
+.block-1{
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    width: 90%;
+    padding: 100px 100px;
+}
+.block-image {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 11px;
+    grid-row-gap: 11px;
+}
+.block-image > img{
+    width: 140px;
+}
+.block-info{
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordeon-item{
+    opacity: 0.5;
+}
+.active{
+    opacity: 1;
+    display: block !important;
+}
+.accordeon-title{
+    display: none;
+    width: 140px;
+}
+.accordeon-answer{
+    border: 10px solid red;
+}
+.block-info-right{
+    display: flex;
+    flex-direction: column;
+}
